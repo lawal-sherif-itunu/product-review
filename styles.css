@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    width: min(90%, 22rem);
+    margin-inline: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    padding-top: 3rem;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+    margin-bottom: 1rem;
+}
+
+header p {
+    color: hsl(303, 10%, 53%);
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three';
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.rate {
+    width: 90%;
+    padding: 1rem;
+    background-color: hsla(333, 80%, 67%, 0.05);
+    border-radius: 1rem;
+    align-content: center;
+}
+
+.star {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 1rem;
+    color: hsl(300, 43%, 22%);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.comment {
+    background-color: hsl(300, 43%, 22%);
+    padding: 2rem;
+    border-radius: 0.7rem;
+}
+
+.comment img {
+    border-radius: 50%;
+    width: 3rem;
+    margin-right: 0;
+}
+
+.profile-details {
+    display: grid;
+    grid-auto-flow: column;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    margin-top: -1rem;
+    margin-left: -3rem;
+}
+
+.profile-name h3, .profile-name p {
+    text-align: left;
+    margin-left: 0;
+    line-height: 1.5rem;
+}
+
+.profile-name h3 {
+    color: hsl(300, 24%, 96%);
+}
+
+.profile-name p {
+    color: hsl(333, 80%, 67%);
+}
+
+p.report {
+    color: hsl(300, 24%, 96%);
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.comment h3 {
+    color: hsl(300, 24%, 96%);
+    display: block;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: hsl(333, 80%, 67%);
+    font-size: large;
+}
+
+@media screen and (min-width: 63rem) {
+    .wrapper {
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: column;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        width: min(90%, 60rem);
+    }
+
+    header h1 {
+        width: min(90%, 20rem);
+    }
+
+    header p {
+        width: min(90%, 30rem);
+        margin-top: 2rem;
+        line-height: 2rem;
+    }
+
+    .rate {
+        display: grid;
+        grid-auto-flow: row;
+        width: min(90%, 50rem);
+        grid-template-areas: 
+            'one two';
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .star {
+        display: flex;
+        justify-content: left;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .rate h3 {
+        font-size: 1rem;
+        width: 13rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .rate:first-of-type {
+        margin-left: -4rem;
+    }
+    .rate:nth-of-type(2){
+        margin-left: -2rem;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 6rem;
+    }
+    .comment:nth-of-type(2) {
+        position: relative;
+        top: 2rem;
+    }
+    .comment:nth-of-type(3){
+        position: relative;
+        top: 4rem;
+    }
+
+    .container {
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: left top, right bottom;
+    }
+}
